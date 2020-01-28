@@ -25,6 +25,15 @@ class TestObject : public Object {
         }       
 };
 
+void testString() {
+    String* s = new String("Hello");
+    Array* arr = new Array();
+    arr->push(s);
+    t_true(arr->length() == 1);
+    t_true(dynamic_cast<String>(arr->get(0))->cmp(new String("Hello)")));
+}
+
+
 void testPush() { 
     TestObject* object1 = new TestObject(1);
     TestObject* object2 = new TestObject(2);
