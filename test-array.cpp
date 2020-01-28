@@ -22,8 +22,8 @@ class TestObject : public Object {
         }
 
         bool equals(Object* other) { 
-            return this->hash_ == other->hash_; 
-        }
+            return this->hash() == other->hash(); 
+        } 
 };
 
 void testPush() { 
