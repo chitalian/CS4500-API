@@ -17,8 +17,8 @@ class TestObject : public Object {
             index = i;
         }
 
-        void hash_me() {
-            hash_ = index;
+        size_t hash_me() {
+            return index;
         }
 
         bool equals(Object* other) { 
