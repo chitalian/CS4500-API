@@ -2,10 +2,13 @@
 
 #include "object.h"
 
-//TODO_TREVOR Should the `Object`s be pointers or just normal? 
 class Array : public Object {
     public:
+        /** Constructor */
         Array() { }
+
+        /** Destructor */
+        virtual ~Array() {};
 
         /**
          * Adds an item to the end of an array
