@@ -21,7 +21,7 @@ class Object : public Sys {
   size_t hash() {  return  hash_ ? hash_ :  hash_ = hash_me_();  }               
                                                                                  
   /** Trivial hash function. */                                                  
-  virtual size_t hash_me_() { return 0; }                                        
+  virtual size_t hash_me() { return 0; }                                        
                                                                                  
   /** Use the address of the other object to determine equality. */              
   virtual bool equals(Object* other) { return this == other; }                   
