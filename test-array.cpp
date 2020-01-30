@@ -17,8 +17,8 @@ class TestObject : public Object {
             index = i;
         }
 
-        void hash_me() {
-            hash_ = index;
+        size_t hash_me() {
+            return index;
         }
 
         bool equals(Object* other) { 
@@ -224,7 +224,7 @@ void testStringInsert() {
     arr->push(str1);
     arr->push(str2);
     t_true(arr->get(0)->equals(str1));
-    t_true(arr->get(0)->equals(str2));
+    t_true(arr->get(1)->equals(str2));
     arr->set(str3, 0);
     t_true(arr->length() == 2);
     t_true(arr->get(0)->equals(str3));
